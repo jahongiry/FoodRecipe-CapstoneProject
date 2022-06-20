@@ -188,3 +188,7 @@ main {
   border: none;
   font-size: xx-large;
 }
+
+.show {
+  animation: fadeIn 250ms;
+}
