@@ -24,3 +24,14 @@ const displayComents = (arr, container) => {
   }
   container.appendChild(messageData);
 };
+
+// function to get all messages
+const getComments = async (id) => {
+  const getMessagesLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/655UItTdFhblxuLYFXUt/comments?item_id=';
+  const request = new Request(getMessagesLink + id);
+  const response = await fetch(request);
+  const responseJson = await response.json();
+  return responseJson;
+};
+
+export { displayComents, getComments, countComment };
