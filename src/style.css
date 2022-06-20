@@ -1,1 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300&display=swap');
 
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gentium Plus', serif;
+}
+
+body {
+  background: #45badd;
+}
+
+h5,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.container {
+  height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.3fr 2.4fr 0.3fr;
+  grid-template-rows: 0.3fr 2.4fr 0.3fr;
+  gap: 0.125rem 0.0125rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    '. header .'
+    '. main .'
+    '. footer .';
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px black solid;
+  color: #333;
+  height: 100px;
+}
+
+.nav-bar-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin-left: 5rem;
+  cursor: pointer;
+}
+
+li:hover {
+  border-bottom: 2px solid #333;
+  font-weight: bold;
+}
