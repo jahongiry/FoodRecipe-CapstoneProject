@@ -26,4 +26,14 @@ const displayData = (arr) => {
   });
 };
 
+// function to get images and title
+const getAllData = async (url) => {
+  const request = new Request(url);
+  const response = await fetch(request);
+  const responseJson = await response.json();
+  const responseInfo = responseJson.meals;
 
+  displayData(responseInfo);
+};
+
+export { getAllData as default };
