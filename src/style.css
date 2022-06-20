@@ -77,91 +77,114 @@ footer {
 }
 
 main {
-    margin: 1rem 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0.5rem 0.5rem;
-    grid-auto-flow: row;
-    grid-template-areas:
-      '. . .'
-      '. . .'
-      '. . .';
-    grid-area: main;
-  }
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0.5rem 0.5rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    '. . .'
+    '. . .'
+    '. . .';
+  grid-area: main;
+}
 
-  .card-food {
-    display: grid;
-    grid-template-columns: 1fr 1.4fr 0.6fr;
-    grid-template-rows: 2fr 0.4fr 0.2fr;
-    gap: 10px;
-    grid-template-areas:
-      'card-img card-img card-img'
-      'card-title card-title card-title'
-      'btn-recipe . btn-liked';
-    border: white 2px solid;
-    width: 300px;
-    background-color: #f4f4f4;
-    box-shadow: 5px 10px 18px #888888;
-  }
-  
-  .card-food:hover {
-    transform: scale(1.01);
-    transition: 300ms;
-    box-shadow: 10px 10px 10px 10px lightgray;
-  }
-  
-  .card-img {
-    overflow: hidden;
-    box-sizing: border-box;
-    grid-area: card-img;
-  }
-  
-  .img-food {
-    width: 100%;
-    min-height: 250px;
-    object-fit: cover;
-  }
-  
-  .card-title {
-    grid-area: card-title;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 0.2rem;
-  }
-  
-  .btn-recipe {
-    background: cyan;
-    border: 1px solid cyan;
-    color: black;
-    font-weight: bold;
-    padding: 0.1rem 0.4rem;
-    cursor: pointer;
-    border-radius: 30px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-  }
-  
-  .btn-liked {
-    cursor: pointer;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-around;
-    background: white;
-    border: none;
-    color: red;
-    font-weight: bold;
-    font-size: 0.8em;
-    padding: 0.1rem 0.2rem;
-  }
-  
-  .no-grid {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .hiden {
-    display: none !important;
-  }
+.card-food {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 0.6fr;
+  grid-template-rows: 2fr 0.4fr 0.2fr;
+  gap: 10px;
+  grid-template-areas:
+    'card-img card-img card-img'
+    'card-title card-title card-title'
+    'btn-recipe . btn-liked';
+  border: white 2px solid;
+  width: 300px;
+  background-color: #f4f4f4;
+  box-shadow: 5px 10px 18px #888;
+}
+
+.card-food:hover {
+  transform: scale(1.01);
+  transition: 300ms;
+  box-shadow: 10px 10px 10px 10px lightgray;
+}
+
+.card-img {
+  overflow: hidden;
+  box-sizing: border-box;
+  grid-area: card-img;
+}
+
+.img-food {
+  width: 100%;
+  min-height: 250px;
+  object-fit: cover;
+}
+
+.card-title {
+  grid-area: card-title;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0.2rem;
+}
+
+.btn-recipe {
+  background: cyan;
+  border: 1px solid cyan;
+  color: black;
+  font-weight: bold;
+  padding: 0.1rem 0.4rem;
+  cursor: pointer;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.btn-liked {
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  background: white;
+  border: none;
+  color: red;
+  font-weight: bold;
+  font-size: 0.8em;
+  padding: 0.1rem 0.2rem;
+}
+
+.no-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.hiden {
+  display: none !important;
+}
+
+.popuptext {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  background-color: lightcyan;
+  color: #333;
+  border-radius: 6px;
+  padding: 8px 0;
+}
+
+.popuptext button {
+  cursor: pointer;
+  align-self: flex-end;
+  margin: 10px 20px;
+  padding: 5px;
+  font-weight: bold;
+  background-color: lightcyan;
+  color: #333;
+  border: none;
+  font-size: xx-large;
+}
