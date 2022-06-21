@@ -1,4 +1,5 @@
 // link to likes and message store api
+// like data
 const projectID = '655UItTdFhblxuLYFXUt';
 const likesLink = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${projectID}/likes/`;
 
