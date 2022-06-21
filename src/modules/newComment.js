@@ -1,4 +1,4 @@
-import { displayComents, getComments } from './displayComents.js';
+import { displayComents, getComments } from './displayComments.js';
 
 // function to post element
 const postNewMessage = async (id, name, text) => {
@@ -30,3 +30,29 @@ const newMessage = (id, user, message) => {
     message.value = '';
   }
 };
+
+const newMessageForm = (container, itemId) => {
+  const formNewMessage = document.createElement('div');
+  formNewMessage.innerHTML = '<h3 class="aligCener">Add a Comment</h3>';
+  formNewMessage.classList.add('mesgContent');
+  const userName = document.createElement('input');
+  userName.type = 'text';
+  userName.name = 'username';
+  userName.placeholder = 'Your name';
+  const textMessage = document.createElement('textarea');
+  textMessage.name = 'comment';
+  textMessage.rows = '4';
+  textMessage.cols = '30';
+  textMessage.placeholder = 'Your comment';
+  const button = document.createElement('input');
+  button.type = 'button';
+  button.value = 'Comment';
+  button.addEventListener('click', () => newMessage(itemId, userName, textMessage));
+  formNewMessage.appendChild(userName);
+  formNewMessage.appendChild(textMessage);
+  formNewMessage.appendChild(button);
+
+  container.appendChild(formNewMessage);
+};
+
+export { newMessageForm as default };
