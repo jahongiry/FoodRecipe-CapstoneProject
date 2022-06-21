@@ -1,5 +1,5 @@
 import hidenItems from './hidenItems.js';
-import { displayComents, getComments } from './displayComents.js';
+import { displayComents, getComments } from './displayComments.js';
 import newMessageForm from './newComent.js';
 
 const mainCont = document.querySelector('.container-food-cards');

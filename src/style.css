@@ -192,3 +192,32 @@ main {
 .show {
   animation: fadeIn 250ms;
 }
+
+.recipe {
+  height: 140px;
+  overflow-y: scroll;
+}
+
+.mesgFormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mesgContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mesgContent input {
+  padding-right: 45px;
+}
+
+.mesgContent input,
+.mesgContent textarea {
+  margin-bottom: 10px;
+  color: #333;
+  border-radius: 6px;
+  font-size: medium;
+}
