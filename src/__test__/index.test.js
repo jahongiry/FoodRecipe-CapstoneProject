@@ -1,4 +1,5 @@
 import { displayCounter } from '../modules/getDataFood.js';
+import { countComment } from '../modules/displayComments.js';
 
 beforeAll(() => {
   document.body.innerHTML = `  
@@ -29,5 +30,23 @@ describe('Check counter all item function', () => {
     const beefElement = document.querySelector('li');
     displayCounter(beefElement, 42);
     expect(beefElement.textContent).toEqual('Beef (42)');
+  });
+});
+
+describe('Check comments counter function', () => {
+  test('Title header shows Comments (5)', () => {
+    const container = document.querySelector('.container-food-cards');
+    container.innerHTML = `<h3>Comments</h3>
+    <div><span>delicious</span></div>
+    <div><span>must prepare</span></div>
+    <div><span>5 star</span></div>
+    <div><span>i love it</span></div>
+    <div><span>underrated</span></div>`;
+    const title = document.querySelector('h3');
+    const array = document.querySelectorAll('span');
+
+    countComment(array, title);
+
+    expect(title.innerHTML).toEqual('Comments (5)');
   });
 });
