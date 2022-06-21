@@ -221,3 +221,23 @@ main {
   border-radius: 6px;
   font-size: medium;
 }
+
+.mesgContent input[type='button'] {
+  background-color: lightcyan;
+  border: 1px solid #333;
+  font-weight: bold;
+  padding: 5px;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.mesgContent div {
+  width: 100%;
+}
+
+.aligCener {
+  align-self: center;
+}
