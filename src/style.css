@@ -10,7 +10,7 @@ body {
 }
 
 body {
-  background: #45badd;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('img/bg.jpg');
 }
 
 h5,
@@ -61,11 +61,11 @@ header {
 li {
   margin-left: 5rem;
   cursor: pointer;
+  transition: all 0.4s;
 }
 
 li:hover {
-  border-bottom: 2px solid #333;
-  font-weight: bold;
+  color: #a7a7a7;
 }
 
 footer {
