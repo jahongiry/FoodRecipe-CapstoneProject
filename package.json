@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --env=jsdom",
     "start": "webpack serve --open",
     "build": "webpack"
   },
@@ -17,6 +17,12 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/HanningtoneM/setup-webpack/issues"
+  },
+  "jest": {
+    "resetMocks": false,
+    "setupFiles": [
+      "jest-localstorage-mock"
+    ]
   },
   "homepage": "https://github.com/HanningtoneM/setup-webpack#readme",
   "devDependencies": {
@@ -40,6 +46,7 @@
   "dependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.18.2",
     "jest-environment-jsdom": "^28.1.1",
+    "jest-localstorage-mock": "^2.4.21",
     "lodash": "^4.17.21"
   }
 }
