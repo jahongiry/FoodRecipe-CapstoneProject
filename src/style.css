@@ -261,3 +261,14 @@ input:focus {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* Add animation (fade in the popup) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
