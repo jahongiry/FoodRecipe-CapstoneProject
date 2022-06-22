@@ -36,8 +36,8 @@ const displayData = (arr) => {
       // eslint-disable-next-line operator-linebreak
       btnLikedElement.innerHTML =
         likesReturned !== undefined
-          ? `<i class="fas fa-heart"></i> (${likesReturned.likes})`
-          : '<i class="far fa-heart"></i> (0)';
+          ? `<ion-icon name="heart-outline"></ion-icon>(${likesReturned.likes})`
+          : '<ion-icon name="heart-outline"></ion-icon> (0)';
     };
     getLikesToItems()
       .then(printLike)

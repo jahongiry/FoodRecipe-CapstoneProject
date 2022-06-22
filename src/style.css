@@ -104,6 +104,8 @@ main {
   width: 300px;
   background-color: #f4f4f4;
   box-shadow: 5px 10px 18px #888;
+  border-radius: 30px;
+  overflow: hidden;
 }
 
 .card-food:hover {
@@ -130,6 +132,7 @@ main {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0.2rem;
+  font-size: 20px;
 }
 
 .btn-recipe {
@@ -137,7 +140,7 @@ main {
   border: 1px solid cyan;
   color: black;
   font-weight: bold;
-  padding: 0.1rem 0.4rem;
+  padding: 0.4rem 0.8rem;
   cursor: pointer;
   border-radius: 30px;
   margin-bottom: 10px;
@@ -157,13 +160,17 @@ main {
   display: flex;
   align-items: baseline;
   justify-content: space-around;
-  background: white;
+  background: #f4f4f4;
   border: none;
   color: red;
   font-weight: bold;
   font-size: 0.8em;
-  padding: 0.1rem 0.2rem;
-  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+}
+
+.btn-liked:hover {
+  transform: scale(1.3);
+  transition: 150ms;
 }
 
 .no-grid {
@@ -200,7 +207,7 @@ main {
 }
 
 .show {
-  animation: fadeIn 250ms;
+  animation: fadeIn 200ms;
 }
 
 .recipe {
