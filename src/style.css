@@ -59,13 +59,14 @@ header {
 }
 
 li {
+  font-size: 20px;
   margin-left: 5rem;
   cursor: pointer;
   transition: all 0.4s;
 }
 
 li:hover {
-  color: #a7a7a7;
+  color: #929292;
 }
 
 footer {
@@ -141,6 +142,14 @@ main {
   border-radius: 30px;
   margin-bottom: 10px;
   margin-left: 10px;
+  box-shadow: 3px 3px #888;
+  transition: all 0.4s;
+}
+
+.btn-recipe:hover,
+.btn-recipe:active {
+  color: cyan;
+  background-color: rgb(92, 92, 92);;
 }
 
 .btn-liked {
@@ -148,12 +157,13 @@ main {
   display: flex;
   align-items: baseline;
   justify-content: space-around;
-  background: white;
+  background: rgb(175, 172, 172);
   border: none;
   color: red;
   font-weight: bold;
   font-size: 0.8em;
   padding: 0.1rem 0.2rem;
+  border-radius: 5px;
 }
 
 .no-grid {
@@ -220,6 +230,8 @@ main {
   color: #333;
   border-radius: 6px;
   font-size: medium;
+  box-shadow: 4px 4px #888;
+  background-color: lightcyan;
 }
 
 .mesgContent input[type='button'] {
