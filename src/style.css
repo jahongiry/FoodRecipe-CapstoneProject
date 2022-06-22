@@ -149,7 +149,7 @@ main {
 .btn-recipe:hover,
 .btn-recipe:active {
   color: cyan;
-  background-color: rgb(92, 92, 92);;
+  background-color: rgb(92, 92, 92);
 }
 
 .btn-liked {
