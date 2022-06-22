@@ -10,7 +10,7 @@ body {
 }
 
 body {
-  background: #45badd;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('img/bg.jpg');
 }
 
 h5,
@@ -59,13 +59,14 @@ header {
 }
 
 li {
+  font-size: 20px;
   margin-left: 5rem;
   cursor: pointer;
+  transition: all 0.4s;
 }
 
 li:hover {
-  border-bottom: 2px solid #333;
-  font-weight: bold;
+  color: #929292;
 }
 
 footer {
@@ -103,6 +104,8 @@ main {
   width: 300px;
   background-color: #f4f4f4;
   box-shadow: 5px 10px 18px #888;
+  border-radius: 30px;
+  overflow: hidden;
 }
 
 .card-food:hover {
@@ -129,6 +132,7 @@ main {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0.2rem;
+  font-size: 20px;
 }
 
 .btn-recipe {
@@ -136,11 +140,19 @@ main {
   border: 1px solid cyan;
   color: black;
   font-weight: bold;
-  padding: 0.1rem 0.4rem;
+  padding: 0.4rem 0.8rem;
   cursor: pointer;
   border-radius: 30px;
   margin-bottom: 10px;
   margin-left: 10px;
+  box-shadow: 3px 3px #888;
+  transition: all 0.4s;
+}
+
+.btn-recipe:hover,
+.btn-recipe:active {
+  color: cyan;
+  background-color: rgb(92, 92, 92);
 }
 
 .btn-liked {
@@ -148,12 +160,17 @@ main {
   display: flex;
   align-items: baseline;
   justify-content: space-around;
-  background: white;
+  background: #f4f4f4;
   border: none;
   color: red;
   font-weight: bold;
   font-size: 0.8em;
-  padding: 0.1rem 0.2rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.btn-liked:hover {
+  transform: scale(1.3);
+  transition: 150ms;
 }
 
 .no-grid {
@@ -190,7 +207,7 @@ main {
 }
 
 .show {
-  animation: fadeIn 250ms;
+  animation: fadeIn 200ms;
 }
 
 .recipe {
@@ -220,6 +237,8 @@ main {
   color: #333;
   border-radius: 6px;
   font-size: medium;
+  box-shadow: 4px 4px #888;
+  background-color: lightcyan;
 }
 
 .mesgContent input[type='button'] {
@@ -240,4 +259,55 @@ input:focus {
 
 .aligCener {
   align-self: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: lightcyan;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Add animation (fade in the popup) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .card-food {
+    box-shadow: 5px 10px 18px #888;
+  }
 }
