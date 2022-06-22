@@ -157,7 +157,7 @@ main {
   display: flex;
   align-items: baseline;
   justify-content: space-around;
-  background: rgb(175, 172, 172);
+  background: white;
   border: none;
   color: red;
   font-weight: bold;
